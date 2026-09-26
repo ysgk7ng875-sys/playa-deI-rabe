@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playa Del Rabe — Luckau</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Arial,Helvetica,sans-serif;background:#080612;color:white}
+body{overflow:auto}
+.hero{
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,74,175,.35), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(0,225,255,.28), transparent 30%),
+    radial-gradient(circle at 85% 75%, rgba(255,185,0,.25), transparent 28%),
+    linear-gradient(145deg,#080612 0%,#170b2c 45%,#090716 100%);
+}
+.hero:before{
+  content:"";position:absolute;inset:-20%;
+  background:
+    repeating-conic-gradient(from 10deg at 50% 50%,rgba(255,255,255,.025) 0 4deg,transparent 4deg 14deg);
+  animation:spin 28s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.card{
+  position:relative; z-index:2; width:min(900px,92vw); padding:58px 32px;
+  text-align:center; border:1px solid rgba(255,255,255,.16);
+  border-radius:32px; background:rgba(8,6,18,.52);
+  backdrop-filter:blur(18px); box-shadow:0 30px 100px rgba(0,0,0,.55);
+}
+.badge{display:inline-block;padding:9px 16px;border-radius:99px;background:rgba(255,255,255,.1);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(52px,10vw,105px);line-height:.88;margin:22px 0 18px;
+  text-transform:uppercase;letter-spacing:-4px;
+  text-shadow:0 0 18px rgba(255,80,190,.65),0 0 50px rgba(0,220,255,.25)}
+h1 span{display:block;font-size:.36em;letter-spacing:7px;margin-top:18px;color:#e9d9ff}
+.tagline{font-size:clamp(17px,2.4vw,24px);opacity:.88;margin-bottom:35px}
+.scene{
+  height:180px;margin:0 auto 34px;max-width:680px;border-radius:24px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 80%,#ff5fbc 0 4%,transparent 16%),
+    radial-gradient(circle at 20% 60%,#00e6ff 0 2%,transparent 15%),
+    radial-gradient(circle at 82% 55%,#ffd34d 0 2%,transparent 15%),
+    linear-gradient(#10091e,#24103d 55%,#090712);
+}
+.laser{position:absolute;width:140%;height:2px;left:-20%;top:30%;transform:rotate(12deg);background:#35efff;box-shadow:0 0 15px #35efff}
+.laser.two{top:45%;transform:rotate(-10deg);background:#ff45bd;box-shadow:0 0 15px #ff45bd}
+.crowd{position:absolute;left:0;right:0;bottom:-5px;height:75px;background:
+  radial-gradient(ellipse at 8% 20%,#000 0 18px,transparent 19px),
+  radial-gradient(ellipse at 20% 5%,#000 0 22px,transparent 23px),
+  radial-gradient(ellipse at 35% 18%,#000 0 20px,transparent 21px),
+  radial-gradient(ellipse at 50% 2%,#000 0 25px,transparent 26px),
+  radial-gradient(ellipse at 67% 15%,#000 0 21px,transparent 22px),
+  radial-gradient(ellipse at 82% 3%,#000 0 24px,transparent 25px),
+  linear-gradient(transparent,#000)}
+.info{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.info div{padding:17px 23px;border-radius:18px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.1)}
+.info strong{display:block;font-size:17px;margin-bottom:5px}
+.info small{opacity:.68;font-size:14px}
+footer{margin-top:32px;opacity:.45;font-size:12px;letter-spacing:1px}
+</style>
+</head>
+<body>
+<section class="hero">
+  <main class="card">
+    <div class="badge">Event • Party • Luckau</div>
+    <h1>Playa Del Rabe<span>Luckau</span></h1>
+    <p class="tagline">Deine Nacht. Deine Musik. Deine Playa.</p>
+    <div class="scene" aria-label="Künstlerische Party- und Eventszene">
+      <div class="laser"></div><div class="laser two"></div><div class="crowd"></div>
+    </div>
+    <div class="info">
+      <div><strong>Freitag</strong><small>19:00 – 04:00 Uhr</small></div>
+      <div><strong>Samstag</strong><small>19:00 – 04:00 Uhr</small></div>
+      <div><strong>Luckau</strong><small>Brandenburg</small></div>
+    </div>
+    <footer>PLAYA DEL RABE • LUCKAU</footer>
+  </main>
+</section>
+</body>
+</html>
